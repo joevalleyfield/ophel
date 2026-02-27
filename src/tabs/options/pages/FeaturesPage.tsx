@@ -601,13 +601,13 @@ const FeaturesPage: React.FC<FeaturesPageProps> = ({ siteId: _siteId, initialTab
               "Show queue overlay above input for queuing prompts while AI generates"
             }
             settingId="prompt-queue"
-            checked={settings.features?.prompts?.promptQueue ?? true}
+            checked={settings.features?.prompts?.promptQueue ?? false}
             onChange={() =>
               updateDeepSetting(
                 "features",
                 "prompts",
                 "promptQueue",
-                !(settings.features?.prompts?.promptQueue ?? true),
+                !(settings.features?.prompts?.promptQueue ?? false),
               )
             }
           />

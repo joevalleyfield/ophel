@@ -362,7 +362,7 @@ export const DEFAULT_SETTINGS: Settings = {
       enabled: true,
       doubleClickToSend: false,
       submitShortcut: "enter",
-      promptQueue: true,
+      promptQueue: false,
     },
     conversations: {
       enabled: true,
