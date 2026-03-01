@@ -2,6 +2,8 @@
 
 > 让 AI 对话如文档般可阅读、导航、复用
 
+> English docs: **[README_EN.md](./README_EN.md)**
+
 <div align="center">
   <img src="./assets/icon.png" width="120" height="120" alt="Ophel Logo"/>
 
