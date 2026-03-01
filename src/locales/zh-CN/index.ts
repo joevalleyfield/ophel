@@ -609,6 +609,7 @@ export const zhCN = {
   conversationsFolderDeleted: "文件夹已删除",
   conversationsCannotDeleteDefault: "无法删除默认文件夹",
   conversationsIcon: "图标",
+  conversationsInbox: "收件箱",
   conversationsFolderName: "名称",
   conversationsFolderNamePlaceholder: "输入文件夹名称",
   conversationsSyncEmpty: "未找到会话",

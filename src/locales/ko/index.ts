@@ -569,6 +569,7 @@ export const ko = {
   conversationsFolderDeleted: "폴더가 삭제되었습니다",
   conversationsCannotDeleteDefault: "기본 폴더는 삭제할 수 없습니다",
   conversationsIcon: "아이콘",
+  conversationsInbox: "받은편지함",
   conversationsFolderName: "이름",
   conversationsFolderNamePlaceholder: "폴더 이름 입력",
   conversationsSyncEmpty: "대화를 찾을 수 없습니다",

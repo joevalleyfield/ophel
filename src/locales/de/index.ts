@@ -567,6 +567,7 @@ export const de = {
   conversationsFolderDeleted: "Gelöscht",
   conversationsCannotDeleteDefault: "Nicht löschbar",
   conversationsIcon: "Icon",
+  conversationsInbox: "Posteingang",
   conversationsFolderName: "Name",
   conversationsFolderNamePlaceholder: "Name eingeben...",
   conversationsSyncEmpty: "Keine Chats gefunden",

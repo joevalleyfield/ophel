@@ -597,6 +597,7 @@ export const ja = {
   conversationsFolderDeleted: "フォルダを削除しました",
   conversationsCannotDeleteDefault: "デフォルトフォルダは削除できません",
   conversationsIcon: "アイコン",
+  conversationsInbox: "受信トレイ",
   conversationsFolderName: "フォルダ名",
   conversationsFolderNamePlaceholder: "フォルダ名を入力",
   conversationsSyncEmpty: "会話が見つかりませんでした",

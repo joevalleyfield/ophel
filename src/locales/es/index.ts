@@ -566,6 +566,7 @@ export const es = {
   conversationsFolderDeleted: "Borrada",
   conversationsCannotDeleteDefault: "No borrable",
   conversationsIcon: "Icono",
+  conversationsInbox: "Bandeja de entrada",
   conversationsFolderName: "Nombre",
   conversationsFolderNamePlaceholder: "Escribe nombre...",
   conversationsSyncEmpty: "Sin chats",

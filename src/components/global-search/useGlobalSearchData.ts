@@ -137,7 +137,11 @@ const buildGlobalSearchSnippet = ({
   return `${prefix}${snippet}${suffix}`
 }
 
-const getFolderDisplayName = (folder: { name: string; icon?: string }): string => {
+const getFolderDisplayName = (folder: { id: string; name: string; icon?: string }): string => {
+  if (folder.id === "inbox") {
+    return "inbox"
+  }
+
   const trimmedName = (folder.name || "").trim()
   const trimmedIcon = (folder.icon || "").trim()
 
@@ -654,7 +658,11 @@ export const useGlobalSearchData = ({
         const title = conversation.title?.trim() || untitledConversation
         const folder = folderMap.get(conversation.folderId)
         const folderLabel = folder
-          ? `${folder.icon ? `${folder.icon} ` : ""}${getFolderDisplayName(folder)}`.trim()
+          ? `${folder.icon ? `${folder.icon} ` : ""}${
+              folder.id === "inbox"
+                ? getLocalizedText({ key: "conversationsInbox", fallback: "Inbox" })
+                : getFolderDisplayName(folder)
+            }`.trim()
           : conversation.folderId
         const tagBadges = (conversation.tagIds || [])
           .map((tagId) => {

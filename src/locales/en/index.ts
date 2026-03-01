@@ -615,6 +615,7 @@ export const en = {
   conversationsFolderDeleted: "Folder deleted",
   conversationsCannotDeleteDefault: "Cannot delete default folder",
   conversationsIcon: "Icon",
+  conversationsInbox: "Inbox",
   conversationsFolderName: "Name",
   conversationsFolderNamePlaceholder: "Enter folder name",
   conversationsSyncEmpty: "No conversations found",

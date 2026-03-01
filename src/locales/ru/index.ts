@@ -563,6 +563,7 @@ export const ru = {
   conversationsFolderDeleted: "Удалена",
   conversationsCannotDeleteDefault: "Нельзя",
   conversationsIcon: "Значок",
+  conversationsInbox: "Входящие",
   conversationsFolderName: "Имя",
   conversationsFolderNamePlaceholder: "Введите имя...",
   conversationsSyncEmpty: "Ничего не найдено",

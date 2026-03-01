@@ -78,7 +78,11 @@ type MenuType =
   | { type: "export"; anchorEl: HTMLElement }
   | null
 
-const getFolderDisplayName = (folder: Pick<Folder, "name" | "icon">): string => {
+const getFolderDisplayName = (folder: Pick<Folder, "id" | "name" | "icon">): string => {
+  if (folder.id === "inbox") {
+    return t("conversationsInbox")
+  }
+
   const trimmedName = (folder.name || "").trim()
   const trimmedIcon = (folder.icon || "").trim()
 

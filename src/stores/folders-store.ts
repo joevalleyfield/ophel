@@ -8,6 +8,7 @@ import { create } from "zustand"
 import { createJSONStorage, persist } from "zustand/middleware"
 
 import { DEFAULT_FOLDERS, type Folder } from "~constants"
+import { t } from "~utils/i18n"
 
 import { chromeStorageAdapter } from "./chrome-adapter"
 
@@ -27,8 +28,17 @@ const normalizeFolderName = (name: string, icon: string): string => {
 }
 
 const normalizeFolder = (folder: Folder): Folder => ({
-  ...folder,
-  name: normalizeFolderName(folder.name, folder.icon),
+  ...(folder.id === "inbox"
+    ? {
+        ...folder,
+        name: t("conversationsInbox"),
+        icon: folder.icon || "📥",
+        isDefault: true,
+      }
+    : {
+        ...folder,
+        name: normalizeFolderName(folder.name, folder.icon),
+      }),
 })
 
 const normalizeFolders = (folders: Folder[]): Folder[] => folders.map(normalizeFolder)
@@ -117,10 +127,18 @@ export const useFoldersStore = create<FoldersState>()(
           return currentState
         }
 
+        const normalizedFolders = normalizeFolders(typedState.folders)
+        const hasInbox = normalizedFolders.some((folder) => folder.id === "inbox")
+
         return {
           ...currentState,
           ...typedState,
-          folders: normalizeFolders(typedState.folders),
+          folders: hasInbox
+            ? normalizedFolders
+            : [
+                { id: "inbox", name: t("conversationsInbox"), icon: "📥", isDefault: true },
+                ...normalizedFolders,
+              ],
         }
       },
       onRehydrateStorage: () => (state) => {

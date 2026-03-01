@@ -536,6 +536,7 @@ export const zhTW = {
   conversationsFolderDeleted: "資料夾已刪除",
   conversationsCannotDeleteDefault: "無法刪除默認資料夾",
   conversationsIcon: "圖示",
+  conversationsInbox: "收件匣",
   conversationsFolderName: "名稱",
   conversationsFolderNamePlaceholder: "輸入資料夾名稱",
   conversationsSyncEmpty: "未找到會話",
